@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-900">
+   
+        <div class="flex flex-col justify-center items-center text-center gap-3 min-h-screen">
+            <video id="video" width="640" height="360" class="Vedio_img rounded-xl text-center"  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4" controls></video>
+            <div>
+                <button onclick="playVideo()" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded">play</button>
+                <button onclick="pauseVideo()" class="bg-yellow-600 hover:bg-yellow-700 px-4 py-2 rounded">pause</button>
+                <button onclick="stopVideo()" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded">stop</button>
+                <button onclick="muteVideo()"  class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">mute</button>
+            </div>
+            <div>
+                <button class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded" onclick="change_Video('https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4')"><td >Video 1</td></button> 
+                <button class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded" onclick="change_Video('https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4')"><td>Video 2</td></button>  
+              </div>  
+            <div class="time">
+               <span class="text-white"> vol: <input type="range" oninput="changeVol(this)" value="1" max="1" min="0" step="0.1"></span>
+               <span class="text-white">time: <input type="range" oninput="changeTime(this)"  min="0" value="0" step="0.1"></span> 
+              </div>
+              
+          </div>
+    
+   
+    <script src="bin/vedio.js"></script>
+</body>
+</html>
